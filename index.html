@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocobaddie - Erlin's Island Adventure</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <!-- HUD Elements -->
+    <div id="hud">
+        <div id="stats">
+            <div class="stat-item">
+                <span class="stat-label">Health:</span>
+                <div class="stat-bar">
+                    <div id="health-bar" class="bar-fill"></div>
+                </div>
+                <span id="health-text">100/100</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Hunger:</span>
+                <div class="stat-bar">
+                    <div id="hunger-bar" class="bar-fill"></div>
+                </div>
+                <span id="hunger-text">100/100</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Energy:</span>
+                <div class="stat-bar">
+                    <div id="energy-bar" class="bar-fill"></div>
+                </div>
+                <span id="energy-text">100/100</span>
+            </div>
+        </div>
+        
+        <div id="day-counter">
+            <span id="day-text">Day 1</span>
+            <span id="time-text">06:00</span>
+        </div>
+        
+        <div id="controls-info">
+            <p><strong>W/A/S/D</strong> - Move | <strong>SPACE</strong> - Jump</p>
+            <p><strong>MOUSE</strong> - Look Around | <strong>LEFT CLICK</strong> - Attack</p>
+        </div>
+        
+        <div id="inventory">
+            <h3>Inventory</h3>
+            <div id="inventory-items"></div>
+        </div>
+        
+        <div id="messages"></div>
+    </div>
+    
+    <!-- Game Over Screen -->
+    <div id="game-over-screen" class="hidden">
+        <div class="game-over-content">
+            <h1 id="game-over-title">Game Over</h1>
+            <p id="game-over-message"></p>
+            <p id="game-over-stats"></p>
+            <button onclick="location.reload()">Restart Game</button>
+        </div>
+    </div>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <h1>Chocobaddie</h1>
+            <p>Erlin's Island Adventure</p>
+            <div class="loading-spinner"></div>
+            <p id="loading-text">Loading...</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
